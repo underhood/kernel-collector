@@ -1,0 +1,24 @@
+diff -uNr linux-4.15/scripts/selinux/genheaders/genheaders.c linux-4.15.netdata/scripts/selinux/genheaders/genheaders.c
+--- linux-4.15/scripts/selinux/genheaders/genheaders.c	2018-01-28 21:20:33.000000000 +0000
++++ linux-4.15.netdata/scripts/selinux/genheaders/genheaders.c	2020-02-21 01:29:54.126149894 +0000
+@@ -9,7 +9,7 @@
+ #include <string.h>
+ #include <errno.h>
+ #include <ctype.h>
+-#include <sys/socket.h>
++#include <linux/socket.h>
+ 
+ struct security_class_mapping {
+ 	const char *name;
+diff -uNr linux-4.15/scripts/selinux/mdp/mdp.c linux-4.15.netdata/scripts/selinux/mdp/mdp.c
+--- linux-4.15/scripts/selinux/mdp/mdp.c	2018-01-28 21:20:33.000000000 +0000
++++ linux-4.15.netdata/scripts/selinux/mdp/mdp.c	2020-02-21 01:29:38.014150525 +0000
+@@ -32,7 +32,7 @@
+ #include <stdlib.h>
+ #include <unistd.h>
+ #include <string.h>
+-#include <sys/socket.h>
++#include <linux/socket.h>
+ 
+ static void usage(char *name)
+ {
